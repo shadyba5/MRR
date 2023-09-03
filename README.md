@@ -1,2 +1,2 @@
 # MRR
-mouse recorder and replayed
+mouse recorder and replayer
