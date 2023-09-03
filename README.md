@@ -1,2 +1,4 @@
 # MRR
-mouse recorder and replayer
+python-based mouse recorder that replays the recording as many times as you tell it to.
+
+mouse record mouse replay. this program is a self-project I wanted to make to practice my Python skills, I got the idea from playing runescape3 an OG game. so I decided to create a software that records mouse movement and clicks on demand, then replay it once the user decides to, and it gives the options for the amount of replays you want. once you run the program it opens an interface with the options to start recording stop recording start playing and stop playing, and an entry for how many times the replaying should occur. the software utilizes threads to enable stopping the recording properly, by signaling the recording thread to stop, the same thing when forcing a replay to stop. the idea is really simple but since I had very little experience with Python I learned a lot coding it.
