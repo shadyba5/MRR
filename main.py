@@ -2,6 +2,8 @@ import random
 import tkinter as tk
 import time
 import threading
+
+import numpy as np
 from pynput.mouse import Listener, Controller
 from pynput import keyboard
 from tkinter import messagebox
@@ -151,8 +153,14 @@ class MouseRecorderApp:
 
                     prev_timestamp = timestamp
 
-                    # Generate a random sleep time between movements
-                    sleep_time = random.uniform(0, 0.005)
+                    # Define the mean and standard deviation for the normal distribution
+                    mean_sleep_time = 0.0025  # Mean sleep time in seconds
+                    std_deviation = 0.001  # Standard deviation in seconds
+
+                    # Generate a random sleep time using a normal distribution
+                    sleep_time = abs(np.random.normal(mean_sleep_time, std_deviation))
+
+                    # Sleep for the generated time
                     time.sleep(sleep_time)
 
                     self.mouse.position = (x, y)
