@@ -1,3 +1,4 @@
+import random
 import tkinter as tk
 import time
 import threading
@@ -149,6 +150,10 @@ class MouseRecorderApp:
                         time.sleep(delay)
 
                     prev_timestamp = timestamp
+
+                    # Generate a random sleep time between movements
+                    sleep_time = random.uniform(0, 0.005)
+                    time.sleep(sleep_time)
 
                     self.mouse.position = (x, y)
                     if event_type == "pressed":
